@@ -7,6 +7,11 @@ using namespace std;
 
 
 int main() {
+	//set up a size 5x5 puzzle.
+	//a stands for the number of towers visible from the left, down to up.
+	//b stands for the number of towers visible from the right, down to up.
+	//c stands for the number of towers visible from the top, left to right.
+	//d stands for the number of towers visible from the bottom, left to right.
 	vector<vector<int>> board(5, vector<int>(5, 0));
 	vector<int> a(5, 0), b(5, 0), c(5, 0), d(5, 0);
 	a[0] = 2, a[1] = 2, a[2] = 3, a[3] = 1, a[4] = 3;
@@ -19,6 +24,8 @@ int main() {
 	vector<vector<vector<int>>> solutions = solver.getOutput().solution;
 	bool success = solver.getOutput().solvable;
 	cout << success << endl;
+
+	//prints out the solution to the puzzle.
 	for (int i = 0; i < int(solutions.size()); i++) {
 		for (int j = int(solutions[i].size() - 1); j >= 0; j--) {
 			for (int k = 0; k < int(solutions[i][j].size()); k++) {
