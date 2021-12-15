@@ -10,3 +10,6 @@ The puzzle starts off with an empty grid and only have the number of towers visi
 The goal is to come up with the tower height at each location that satisfies the number of towers visible.
 
 The max number of towers visible is n, minimum is 1. There may be no solutions or multiple different solutions, which all may be found.
+
+
+
